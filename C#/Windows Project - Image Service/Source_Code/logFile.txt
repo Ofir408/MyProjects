@@ -1,0 +1,146 @@
+Commits on Apr 7, 2018
+added handlerclosing event. program is now runnable from console.
+
+@chorin1
+chorin1 committed 2 hours from now
+ 
+Commits on Apr 6, 2018
+Log file added.
+
+@Ofir408
+Ofir408 committed a day ago
+Verified   
+Now we handle with input of a directory that doesn't exist.
+
+@Ofir408
+Ofir408 committed a day ago
+ 
+Commits on Apr 4, 2018
+I took care of the case that new picture is added in that same name, …  …
+
+@Ofir408
+Ofir408 committed 3 days ago
+ 
+added dispose() to watchers
+
+@chorin1
+chorin1 committed 3 days ago
+ 
+added logging classes, integrated into the project.
+
+@chorin1
+chorin1 committed 3 days ago
+ 
+Commits on Apr 2, 2018
+Now there is no bug that it doesn't delete the source images :)
+
+@Ofir408
+Ofir408 committed 5 days ago
+ 
+After arrangement the ThumbnailsCreater function, now it coppies good…  …
+
+@Ofir408
+Ofir408 committed 5 days ago
+ 
+Fix the bug that in the name of Thumbnails it inserts a dot in the st…  …
+
+@Ofir408
+Ofir408 committed 6 days ago
+ 
+Commits on Apr 1, 2018
+Fixed bug that shows an exception + start the program with initailize…  …
+
+@Ofir408
+Ofir408 committed 6 days ago
+ 
+new App.config file to load the data from file.  …
+
+@Ofir408
+Ofir408 committed 6 days ago
+Verified   
+minor fixes in FolderHandler
+
+@chorin1
+chorin1 committed 6 days ago
+ 
+small change to server (ctor)
+
+@chorin1
+chorin1 committed 6 days ago
+ 
+Close support
+
+@Ofir408
+Ofir408 committed 6 days ago
+ 
+Merge branch 'master' of https://github.com/chorin1/ImageService
+
+@Ofir408
+Ofir408 committed 6 days ago
+ 
+Adding the server
+
+@Ofir408
+Ofir408 committed 6 days ago
+ 
+more work on folderHandler, should work with server now
+
+@chorin1
+chorin1 committed 6 days ago
+ 
+more work on Handler, folder structure fixed
+
+@chorin1
+chorin1 committed 6 days ago
+ 
+more work on the appconfig and folder handler
+
+@chorin1
+chorin1 committed 6 days ago
+ 
+added AppConfig class, small renaming changed
+
+@chorin1
+chorin1 committed 6 days ago
+ 
+Commits on Mar 29, 2018
+I added NewFileCommad + ImageController + their interfaces.  …
+
+@Ofir408
+Ofir408 committed 9 days ago
+ 
+Added image shrink support, everything is explained & Illustrated  …
+
+@Ofir408
+Ofir408 committed 9 days ago
+ 
+Added ImageServiceModal after I fixed the bugs.  …
+
+@Ofir408
+Ofir408 committed 10 days ago
+ 
+Commits on Mar 24, 2018
+added folder handler (unfinished)
+
+@chorin1
+chorin1 committed 14 days ago
+ 
+changed curly bracket settings in VS
+
+@chorin1
+chorin1 committed 14 days ago
+ 
+created the image serivce with an installer
+
+@chorin1
+chorin1 committed 14 days ago
+ 
+Add project files.
+
+@chorin1
+chorin1 committed 14 days ago
+ 
+Add .gitignore and .gitattributes.
+
+@chorin1
+chorin1 committed 14 days ago
