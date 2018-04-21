@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="678.0" spacing="5.0" style="-fx-background-color: LightBlue; -fx-alignment: center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoardWindowController">
+   <children>
+      <AnchorPane prefHeight="36.0" prefWidth="678.0">
+         <children>
+            <Button fx:id="closeButton" layoutX="33.0" layoutY="6.0" mnemonicParsing="false" onAction="#closeButtonPressed" text="Go Back" />
+         </children>
+      </AnchorPane>
+      <Label text="Reversi Game" textFill="#da1313" underline="true">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="425.0" prefWidth="678.0">
+         <children>
+            <GridPane fx:id="gameBoard" cache="true" layoutX="127.0" layoutY="14.0" prefHeight="417.0" prefWidth="447.0" style="-fx-alignment: center;">
+              
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="CurrentTurnLabel" />
+      <Label fx:id="BlackScoreLabel" />
+      <Label fx:id="WhiteScoreTable" />
+   </children>
+</VBox>

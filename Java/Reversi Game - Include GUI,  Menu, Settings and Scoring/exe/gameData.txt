@@ -1,0 +1,3 @@
+First player color is: 1.
+Second player color is: 2.
+Size of the board: 6.

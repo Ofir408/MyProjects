@@ -1,0 +1,3 @@
+First player color is: 0.
+Second player color is: 0.
+Size of the board: 10.

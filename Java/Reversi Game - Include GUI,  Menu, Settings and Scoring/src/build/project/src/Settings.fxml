@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="570.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsControler">
+   <children>
+      <Accordion />
+      <AnchorPane prefHeight="570.0" prefWidth="641.0" style="-fx-background-color: #0000FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField alignment="TOP_CENTER" focusTraversable="false" layoutX="165.0" layoutY="48.0" scaleShape="false" style="-fx-background-color: #FFD700;" text="Settings">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </TextField>
+            <GridPane layoutX="52.0" layoutY="184.0" prefHeight="231.0" prefWidth="424.0" style="-fx-background-color: #90EE90;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="135.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="192.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="63.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-background-color: #FF0000;" text="First Player Color" />
+                  <Label style="-fx-background-color: #FF0000;" text="Second Player Color" GridPane.rowIndex="1" />
+                  <Label style="-fx-background-color: #FF0000;" text="Board size" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="175.0" style="-fx-background-color: #FF8C00;" text="Choose (1-5), notice to (*) below" GridPane.columnIndex="1" />
+                  <Label style="-fx-background-color: #FF8C00;" text="Choose (1-5), notice to (*) below" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label style="-fx-background-color: #FF8C00;" text="Choose a number between 4-20" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="firstPlayerColor" GridPane.columnIndex="2" />
+                  <TextField fx:id="secondPlayerColor" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="boardSize" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Label layoutX="135.0" layoutY="452.0" style="-fx-background-color: #FFD700;" text="(*) Write 1 For Black, 2-White, 3-Red, 4-Pink, 5-Green " />
+            <Button fx:id="saveSettingsButton" layoutX="206.0" layoutY="507.0" mnemonicParsing="false" onAction="#saveSettingsButtonPressed" prefHeight="25.0" prefWidth="107.0" text="Save Settings" />
+            <Button fx:id="closeButton" layoutX="52.0" layoutY="43.0" mnemonicParsing="false" onAction="#goBackWasPressed" text="Go Back" />
+            <TextArea layoutX="472.0" layoutY="-3.0" prefHeight="204.0" prefWidth="140.0" text="&#10;     Current Settings:&#10;&#10;" />
+            <Text layoutX="500.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color Player 2:" wrappingWidth="83.0" />
+            <Text layoutX="496.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Color Player 1:" wrappingWidth="90.0" />
+            <Text layoutX="500.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size of Board:" wrappingWidth="74.0" />
+            <Text fx:id="one" layoutX="582.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="26.0" />
+            <Text fx:id="size" layoutX="580.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="13.0" />
+            <Text fx:id="two" layoutX="580.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="13.0" />
+            <Separator layoutX="478.0" layoutY="47.0" prefHeight="3.0" prefWidth="163.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

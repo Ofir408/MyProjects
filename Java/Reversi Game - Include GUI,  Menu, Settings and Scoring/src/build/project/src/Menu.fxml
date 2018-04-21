@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuControler"> 
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="601.0" stroke="BLACK" strokeType="INSIDE" width="599.0" />
+      <RadioButton fx:id="startButton" layoutX="108.0" layoutY="207.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="102.0" selected="true" style="-fx-background-color: #FFD700;" text="Start">
+         <toggleGroup>
+            <ToggleGroup fx:id="option" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="settingsButton" layoutX="108.0" layoutY="317.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #FFD700;" text="Settings" toggleGroup="$option" />
+      <Text fontSmoothingType="LCD" layoutX="147.0" layoutY="118.0" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #FFA500;" text="Choose The Option That You Want" wrappingWidth="305.0">
+         <font>
+            <Font name="Constantia Bold Italic" size="18.0" />
+         </font></Text>
+      <Separator layoutX="150.0" layoutY="130.0" prefHeight="0.0" prefWidth="299.0" style="-fx-background-color: #F5F5F5;" />
+      <Button fx:id="enterButton" layoutX="253.0" layoutY="514.0" mnemonicParsing="false" onAction="#enterWasPressed" prefHeight="32.0" prefWidth="81.0" style="-fx-background-color: #FFA500;" text="Enter" />
+      <ImageView fitHeight="183.0" fitWidth="287.0" layoutX="273.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Downloads/rev_img1.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="170.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.13671875" />
+      <Button fx:id="exit" layoutX="22.0" layoutY="34.0" mnemonicParsing="false" onAction="#exitFromMenu" prefHeight="25.0" prefWidth="117.0" text="Exit From Menu" />
+   </children>
+</AnchorPane>
