@@ -1,0 +1,61 @@
+
+# This is my second level - soccer legends
+START_LEVEL
+level_name:soccer legends
+ball_velocities:60,450 -60,390 0,400
+background:image(background_images/champions.jpg)
+paddle_speed:550
+paddle_width:100
+block_definitions:definitions/my_second_blocks.txt
+blocks_start_x:25
+blocks_start_y:5
+row_height:150
+num_blocks:10
+START_BLOCKS
+-
+ababa
+babab
+END_BLOCKS
+END_LEVEL
+
+# This is my first level - The amazing nature
+# Image Background and images for blocks
+
+START_LEVEL
+level_name:The amazing nature
+ball_velocities:70,390 -70,400 -140,430 140,420
+background:image(background_images/nature.jpg)
+paddle_speed:650
+paddle_width:110
+block_definitions:definitions/my_first_blocks.txt
+blocks_start_x:10
+blocks_start_y:80
+row_height:50
+num_blocks:26
+START_BLOCKS
+-
+-
+-zlzlzlzlzlzlz--
+-lzlzlzlzlzlzl--
+END_BLOCKS
+END_LEVEL
+
+# This is my third level - final level
+# Image Background and images for blocks
+
+START_LEVEL
+level_name:Final Level
+ball_velocities:75,420 -70,430 -45,470 55,380
+background:image(background_images/treenature.jpg)
+paddle_speed:640
+paddle_width:120
+block_definitions:definitions/my_third_blocks.txt
+blocks_start_x:10
+blocks_start_y:140
+row_height:100
+num_blocks:12
+START_BLOCKS
+--abcdef-
+--fedcba--
+END_BLOCKS
+END_LEVEL

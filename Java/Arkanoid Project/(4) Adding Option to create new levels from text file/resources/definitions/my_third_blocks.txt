@@ -1,0 +1,14 @@
+# default values for blocks
+default height:100 width:100 hit_points:2 stroke:color(black)
+
+# block definitions
+bdef symbol:a fill-1:image(block_images/one.jpg) fill-2:image(block_images/two.jpg)
+bdef symbol:b  fill-1:image(block_images/three.jpg) fill-2:image(block_images/four.jpg)
+bdef symbol:c  fill-1:image(block_images/five.jpg) fill-2:image(block_images/six.jpg)
+bdef symbol:d  fill-1:image(block_images/seven.jpg) fill-2:image(block_images/eight.jpg)
+bdef symbol:e  fill-1:image(block_images/nine.jpg) fill-2:image(block_images/ten.jpg)
+bdef symbol:f hit_points:3 fill-1:image(block_images/six.jpg) fill-2:image(block_images/six.jpg) fill-3:color(red) 
+
+
+# spacers definitions
+sdef symbol:- width:25

@@ -1,0 +1,50 @@
+# Level 1
+# Image Background and images for blocks
+START_LEVEL
+level_name:Hit Messi
+ball_velocities:1,-5 -1,-5 0,-6
+background:image(background_images/real_background.jpg)
+paddle_speed:10
+paddle_width:160
+block_definitions:definitions/soccer_block_definitions.txt
+blocks_start_x:20
+blocks_start_y:80
+row_height:60
+num_blocks:10
+START_BLOCKS
+-
+-
+mmmmm
+-
+-mm--mm
+------m
+END_BLOCKS
+END_LEVEL
+# Level 2
+# Wide paddle with many balls
+START_LEVEL
+level_name: Smile
+ball_velocities:-6,5 0,10 6,5
+background:color(red)
+paddle_speed:8
+paddle_width:400
+block_definitions:definitions/standard_block_definitions.txt
+blocks_start_x:25
+blocks_start_y:80
+row_height:25
+num_blocks:21
+START_BLOCKS
+-
+--bb--------bb
+--bb--------bb
+-
+-
+-
+-
+-y-----------y
+--y---------y
+---y-------y
+----y-----y
+-----yyyyy
+END_BLOCKS
+END_LEVEL

@@ -1,0 +1,10 @@
+# default values for blocks
+default height:100 width:150 hit_points:2 stroke:color(black)
+
+# block definitions
+bdef symbol:a fill-1:image(block_images/barcelona_after.jpg) fill-2:image(block_images/barcelona_before.jpg)
+bdef symbol:b  fill-1:image(block_images/natania_after.jpg) fill-2:image(block_images/natania_before.jpg)
+
+
+# spacers definitions
+sdef symbol:- width:25

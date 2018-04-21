@@ -1,0 +1,10 @@
+# default values for blocks
+default height:50 width:50 hit_points:2 stroke:color(black)
+
+# block definitions
+bdef symbol:l fill-1:image(block_images/magen_david.jpg) fill-2:color(red) width:50
+bdef symbol:z  fill-1:image(block_images/magen_david.jpg) fill-2:image(block_images/magen_david_black.jpg)
+
+
+# spacers definitions
+sdef symbol:- width:50
