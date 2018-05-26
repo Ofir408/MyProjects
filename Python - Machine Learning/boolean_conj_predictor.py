@@ -1,6 +1,5 @@
 
 # Name: Ofir Ben-Shoham
-# Id:   208642496
 
 import sys
 import numpy as np
