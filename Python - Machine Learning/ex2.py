@@ -1,5 +1,4 @@
 # Ofir Ben Shoham.
-# 208642496.
 
 import numpy
 import matplotlib.pyplot as plt
