@@ -1,0 +1,4 @@
+Header header
+string robot_ns
+float32 threat_probability
+string caught_location

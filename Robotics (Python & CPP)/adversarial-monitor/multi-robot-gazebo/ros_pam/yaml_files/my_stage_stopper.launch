@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch> 
+  <param name="/use_sim_time" value="true"/>
+  
+  <!-- Launch the willow-garage world in a stageros simulator -->
+  <node name="stage" pkg="stage_ros" type="stageros" args="$(find stage_ros)/world/willow-erratic.world"/>
+
+  <!-- Launch a map_server from navigation stack, instead of a grid_server from PAM -->
+  <node name="grid_server" pkg="map_server" type="map_server" args="$(find ros_pam)/examples/threats_map_server.yaml" output="screen">
+    <remap from="map" to="threat_grid"/>
+    <!-- Don't really need to remap map_metadata, unless another map server instance will be used for obstacles. Keeping this here for example. -->
+    <remap from="map_metadata" to="threat_grid_metadata"/>
+  </node>
+
+  <!-- Launch the stopper node from Roi's presentations -->
+  <node name="stopper" pkg="my_stage" type="stopper"/>
+
+  <!-- Launch the adversarial node -->
+  <node name="adversarial_monitor" pkg="ros_pam" type="monitor.py" args="$(find ros_pam)/examples/adversarial_stage.yaml" output="screen">
+    <!-- Since we're using map_server, which publishes data in the range of [-1,100], we need to modify the normalization factor from the default 128 to a 100. -->
+    <param name="probability_normalization_factor" value="100.0"/>
+  </node>
+</launch>

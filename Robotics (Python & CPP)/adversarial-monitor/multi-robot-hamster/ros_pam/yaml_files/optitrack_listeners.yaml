@@ -1,0 +1,7 @@
+# This yaml file composes from dict of tuples, each tuple is: (robot_name, optitrack_robot_identifier)
+# Regarding this example, it means that we will have an optitrack listner to optitrack_robot_identifier, for robot_name. 
+# this listener gets update from optitrack system, and convert this msg to an Odometry message, 
+# which is being used in our tracking monitor.py (to detect if the robot was caught in a threat). 
+
+# robot_name:  optitrack_robot_identifier (as written in rviz).
+agent5: /rigid_body_3

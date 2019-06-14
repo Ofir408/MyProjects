@@ -1,0 +1,12 @@
+
+# Describes a mapping between a robot's name to a topic. 
+# the optitrack the monitor will get the pose of the robot via the given topic. 
+# node_name: topic_name
+
+
+/agent1: /agent1/optitrack_data
+/agent2: /agent2/optitrack_data
+/agent3: /agent3/optitrack_data
+/agent4: /agent4/optitrack_data
+/agent5: /agent5/optitrack_data
+/agent6: /agent6/optitrack_data

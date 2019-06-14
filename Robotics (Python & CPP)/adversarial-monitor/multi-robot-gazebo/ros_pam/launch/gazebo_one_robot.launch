@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch> 
+    <param name="/use_sim_time" value="true" />   
+    <arg name="robot_name" default="robot1"/>
+    <remap from="/scan" to="$(arg robot_name)/scan"/>
+    <remap from="/cmd_vel_mux/input/teleop" to="$(arg robot_name)/cmd_vel_mux/input/navi"/>
+    
+    <!-- Launch the turtle bot world -->
+    <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">       
+        <arg name="world_file" value="$(find turtlebot_gazebo)/worlds/corridor.world"/>
+    </include>
+    
+    <!-- Launch the node that will update ground truth pose of the robot from /gazebo/models -->
+    <!-- TODO: This might not be the correct solution and some gazebo plugin should be used instead -->
+    <node name="state_extractor" pkg="ros_pam" type="true_pose_from_gazebo.py">
+        <param name="states_to_odom_yaml" value="$(find ros_pam)/yaml_files/gazebo_states.yaml"/>
+    </node>
+    
+    <!-- Launch the grid_server node-->
+    <node name="grid_server" pkg="ros_pam" type="grid_server.py" output="screen">
+        <param name="yaml_file" value="$(find ros_pam)/yaml_files/willow-threat.yaml"/>
+    </node>
+    
+ 
+    <!-- Launch stopper node -->
+    <node name="stopper" pkg="stopper" type="stopper" output="screen" args="$(arg robot_name)">
+    </node>
+
+
+    
+    <!-- Launch the adversarial node -->
+    <node name="adversarial_monitor" pkg="ros_pam" type="monitor.py" args="$(find ros_pam)/yaml_files/adversarial_gazebo.yaml" output="screen"/>
+
+
+</launch>

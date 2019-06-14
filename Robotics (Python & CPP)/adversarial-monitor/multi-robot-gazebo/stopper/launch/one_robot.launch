@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch> 
+  <param name="/use_sim_time" value="true" />
+    <arg name="robot_name"/>
+    <arg name="init_pose"/>
+
+
+    <!-- Launch stopper node -->
+    <node name="stopper" pkg="stopper" type="stopper" output="screen" args="$(arg robot_name)">
+  <remap from="/$(arg robot_name)/$(arg robot_name)/cmd_vel_mux/input/navi" to="/$(arg robot_name)/cmd_vel_mux/input/navi"/>
+  <remap from="/$(arg robot_name)/$(arg robot_name)/scan" to="/$(arg robot_name)/scan"/>
+     </node>
+
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="$(arg init_pose) -urdf -param robot_description -model $(arg robot_name)" output="screen"/>
+    <node name="$(arg robot_name)_mobile_base_nodelet_manager" pkg="nodelet" type="nodelet" args="manager"/>
+    <node name="$(arg robot_name)_joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+
+
+   <!-- Fake laser -->
+   <node pkg="nodelet" type="nodelet" name="laserscan_nodelet_manager" args="manager"/>
+   <node pkg="nodelet" type="nodelet" name="depthimage_to_laserscan"
+         args="load depthimage_to_laserscan/DepthImageToLaserScanNodelet laserscan_nodelet_manager">
+     <param name="scan_height" value="10"/>
+     <param name="range_min" value="0.45"/>
+     <param name="output_frame_id" value="/$(arg robot_name)/camera_depth_frame"/>
+     <remap from="image" to="/$(arg robot_name)/camera/depth/image_raw"/>
+   </node>
+
+
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+
+</launch>

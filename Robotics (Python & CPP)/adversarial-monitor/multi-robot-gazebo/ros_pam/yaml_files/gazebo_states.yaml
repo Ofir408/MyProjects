@@ -1,0 +1,15 @@
+# yaml file for the gazebo_ground_truth_updater node.
+#
+# Describes a mapping between a gazebo's model name and the desired ground thruth topic:
+# model_name: topic_name
+#
+# The node will extract the pose/twist of the model from /gazebo/model_states 
+# and will publish that as nav_msgs::Odometry to that topic for each pair in the list below.
+
+
+robot1: /robot1/base_pose_ground_truth
+robot2: /robot2/base_pose_ground_truth
+robot3: /robot3/base_pose_ground_truth
+robot4: /robot4/base_pose_ground_truth
+robot5: /robot5/base_pose_ground_truth
+

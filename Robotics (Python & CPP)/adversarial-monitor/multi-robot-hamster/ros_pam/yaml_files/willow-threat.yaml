@@ -1,0 +1,12 @@
+# typical yaml file for PAM package's grid server.
+#
+#
+# 'image' and 'resolution' are mandatory and 'negate' is optional.
+# Other map_server tags are not supported at the moment.
+#
+# Note that unlike the map_server yaml file, 'negate' is bool and not int (0 or 1).
+
+
+image: willow-threat.pgm
+resolution: 0.03
+negate: True

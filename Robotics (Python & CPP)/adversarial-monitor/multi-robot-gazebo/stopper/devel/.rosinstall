@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ofir/catkin_ws/src/stopper/devel/setup.sh

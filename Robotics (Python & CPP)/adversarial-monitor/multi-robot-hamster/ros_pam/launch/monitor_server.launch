@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch> 
+
+
+        <!-- Launch the grid_server node-->
+    <node name="grid_server" pkg="ros_pam" type="grid_server.py" output="screen">
+        <param name="yaml_file" value="$(find ros_pam)/yaml_files/willow-threat.yaml"/>
+    </node>
+
+        <!-- Launch the adversarial node -->
+    <node name="adversarial_monitor" pkg="ros_pam" type="monitor.py" args="$(find ros_pam)/yaml_files/adversarial_data.yaml" output="screen">
+    	<param name="shutdown_node_on_trigger" type="bool" value="true"/>
+        <param name="probability_normalization_factor" type="double" value="2048.0"/>
+    </node>
+
+
+    <!-- Just the master node that constains the monitor needs the follows: -->
+    
+
+
+    <!-- Launch the logger node -->
+        <node name="file_writer" pkg="logger" type="file_writer.py" cwd="node" output="screen"/>
+
+
+</launch>

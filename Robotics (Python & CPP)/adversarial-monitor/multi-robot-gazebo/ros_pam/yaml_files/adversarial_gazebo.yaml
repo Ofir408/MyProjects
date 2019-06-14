@@ -1,0 +1,22 @@
+# A yaml file for the adversarial node
+#
+# Describes a mapping between a robot's name (or a namespace) to a ground truth pose topic:
+# node_name: topic_name
+#
+# The node will monitor topic_name for each line in the list and will use a threat map (coming from the grid_server or from a navigation stack's map_server)
+# to check if any of the robots "stepped" on a threat from the map.
+#
+# When that happens and the threat was triggered (each threat map cell has a trigger probability), 
+# adversarial node will report about this to a dedicated reporting topic and (unless configured not to) will shutdown node_name.
+#
+# If a group namespace was given instead of a robot's name, all nodes under that namespace will be shutdown, 
+# so for example a line "/robot_0: /robot_0/base_pose_ground_truth" in a stage world with several robots will shutdown all nodes under the namesapce "/robot0/".
+# 
+# Note that some of the nodes are set to respawn, so shutting them down doesn't mean they will remain that way.
+
+robot1: /robot1/base_pose_ground_truth
+robot2: /robot2/base_pose_ground_truth
+robot3: /robot3/base_pose_ground_truth
+robot4: /robot4/base_pose_ground_truth
+
+

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch> 
+    <!-- Launch the logger node -->
+        <node name="file_writer" pkg="logger" type="file_writer.py" cwd="node" output="screen"/>
+
+</launch>

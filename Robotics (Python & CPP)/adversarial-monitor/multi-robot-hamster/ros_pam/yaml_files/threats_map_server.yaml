@@ -1,0 +1,11 @@
+# Full yaml file for navigation stack's map_server (including the undocument 'mode' tag)
+#
+# 'mode' must be set to 'scale' otherwise map_server treats everything that falls between 'occupied_thresh' and 'free_thresh' as 0.
+
+image: willow-threat.pgm
+resolution: 1.5
+origin: [1.0, 1.0, 0.0]
+negate: 0
+occupied_thresh: 0.99
+free_thresh: 0.01
+mode: scale

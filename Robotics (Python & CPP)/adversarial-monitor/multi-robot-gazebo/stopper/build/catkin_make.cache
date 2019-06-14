@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/ofir/catkin_ws/src/stopper/devel -DCMAKE_INSTALL_PREFIX=/home/ofir/catkin_ws/src/stopper/install -G Unix Makefiles

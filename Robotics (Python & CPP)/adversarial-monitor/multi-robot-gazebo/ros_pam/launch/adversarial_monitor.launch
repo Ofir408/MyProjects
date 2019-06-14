@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <param name="/use_sim_time" value="true"/>
+  <arg name="robots_yaml_file"/>
+  <arg name="shutdown_node_on_trigger" default="True"/>
+  <arg name="probability_normalization_factor" default="128.0"/>
+ 
+  <!-- The adversarial monitor node with all parameters explicitly set to their default values -->
+  <node name="monitor" pkg="ros_pam" type="monitor.py" args="$(arg robots_yaml_file)" output="screen">
+    <param name="shutdown_node_on_trigger" value="$(arg shutdown_node_on_trigger)"/>
+    <param name="probability_normalization_factor" value="$(arg probability_normalization_factor)"/>
+  </node>
+
+</launch>
+

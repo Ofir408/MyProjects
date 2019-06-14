@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch> 
+
+    <arg name="robot_name"/>
+
+
+    <!-- Launch stopper node -->
+    <node name="$(arg robot_name)_stopper" pkg="stopper" type="stopper" output="screen" args="$(arg robot_name)">
+    </node>
+
+<!-- Launch the optitrack_odom_publisher node -->
+    <node name="$(arg robot_name)_optitrack_odom_publisher" pkg="ros_pam" type="optitrack_odom_publisher.py" args="$(find ros_pam)/yaml_files/optitrack_listeners.yaml"  output="screen"/>
+    
+
+</launch>
